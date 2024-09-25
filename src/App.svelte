@@ -27,7 +27,7 @@
     }
 
     const themeCheck = () => {
-      if (userTheme === 'dark' || (!userTheme && systemTheme)) {
+      if (!userTheme || userTheme === 'dark') {
         document.documentElement.classList.add('dark');
         moonIcon.style.display = 'none';
       } else {
